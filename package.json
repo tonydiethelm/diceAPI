@@ -1,5 +1,29 @@
 {
   "dependencies": {
     "express": "^4.21.2"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "name": "diceapi",
+  "description": "I want to generate a number of random numbers, available over the internet.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonydiethelm/diceAPI.git"
+  },
+  "keywords": [
+    "Tony",
+    "Diethelm"
+  ],
+  "author": "Tony Diethelm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonydiethelm/diceAPI/issues"
+  },
+  "homepage": "https://github.com/tonydiethelm/diceAPI#readme"
 }
