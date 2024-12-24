@@ -12,7 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ExpressBE/index.js",
-    "start": "node ExpressBE/index.js"
+    "prod": "node ExpressBE/index.js"
   },
   "repository": {
     "type": "git",
