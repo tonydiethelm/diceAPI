@@ -1,0 +1,13 @@
+services:
+  dice:
+    image: tonydiethelm/dice
+    container_name: dice
+    tty: true
+    stdin_open: true
+    restart: always
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=Etc/UTC
+    ports:
+      - "3000:3000"
