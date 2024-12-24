@@ -1,6 +1,6 @@
 services:
   dice:
-    image: tonydiethelm/dice
+    image: tonydiethelm/dice:dice
     container_name: dice
     tty: true
     stdin_open: true
