@@ -10,18 +10,24 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+
+//enable CORS, we don't care who calls for our random numbers.
+const cors = require('cors');
+app.use(cors());
+
+
 const generateNumbersIntoResponse = require('./generateNumbersIntoResponse');
 const checkRequestForBogus = require('./checkRequestForBogus');
 
 //set up a test "hello world" kind of thing to make sure it's working.
-app.get('/hello', (request, response) => {
+app.get('/dice/api/hello', (request, response) => {
     response.status(200).send('Howdy!')
 })
 
 
 //Handle GET request
 //
-app.get('/:numberOfDice/:rangeOfDice', 
+app.get('/dice/api/:numberOfDice/:rangeOfDice', 
     checkRequestForBogus,
     generateNumbersIntoResponse,
     (request, response) => {
