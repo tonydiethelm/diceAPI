@@ -19,6 +19,13 @@ checkRequestForBogus = (request, response, next) => {
         response.status(400).send("Ask for positive numbers...");
     }
 
+    //did they ask for a huge number of rolls or a huge dice?
+    if(numberOfDice > 100 || rangeOfDice > 1000){
+        console.log("We were sent: ", numberOfDice, rangeOfDice);
+        response.status(400).send("Don't try to crash my server with a huge request...");
+    }
+
+
 
     //did they properly as for both number of dice and range of dice? 
     //This doesn't work, doesn't enter the express route if they don't. 
